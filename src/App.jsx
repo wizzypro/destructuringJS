@@ -1,17 +1,19 @@
 import React from "react";
 import cars from "./practice";
 
-const [honda, tesla] = cars.map((x) => x);
-const [hondaTopColour, hondaOtherColour] = honda.coloursByPopularity.map(
-  (x) => x
-);
+const [honda, tesla] = cars;
+const [hondaTopColour, hondaOtherColour] = honda.coloursByPopularity;
 
-const [teslaTopColour, teslaOtherColour] = tesla.coloursByPopularity.map(
-  (x) => x
-);
+const [teslaTopColour, teslaOtherColour] = tesla.coloursByPopularity;
 
-const hondaTopSpeed = honda.speedStats.topSpeed;
-const teslaTopSpeed = tesla.speedStats.topSpeed;
+const {
+  topSpeed: hondaTopSpeed,
+  zeroToSixty: hondaZeroToSixty
+} = honda.speedStats;
+const {
+  topSpeed: teslaTopSpeed,
+  zeroToSixty: teslaZeroToSixty
+} = tesla.speedStats;
 
 function App() {
   return (
